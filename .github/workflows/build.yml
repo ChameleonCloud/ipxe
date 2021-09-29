@@ -22,4 +22,8 @@ jobs:
                bin-arm64-efi/ipxe.efi \
                bin-arm64-efi/snp.efi \
                bin-arm64-efi/snponly.efi
-
+      - name: upload built artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: bin-arm64-efi
+          path: bin-arm64-efi/*.efi
